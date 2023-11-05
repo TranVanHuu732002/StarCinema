@@ -1,0 +1,71 @@
+.carousel-control-prev{
+    margin-left: -110px;
+}
+
+.carousel-control-next{
+  margin-right: -110px;
+}
+
+.icon-banner{
+  font-size: 20px; 
+  background-color: #666;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px; 
+  color: #fff; 
+}
+
+.icon-banner:hover{
+  background-color: #111;
+}
+
+.card img:hover,
+.card-body h6:hover{
+  transform: translate(2px,-2px);
+  opacity: 0.8;
+  cursor: pointer;
+}
+/* phantrang */
+
+.movie{
+  position: relative;
+}
+.movie::after{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background-color: #0077f6;
+  left: -8px;
+}
+
+.type-movie{
+  margin-top: 8px;
+  cursor: pointer;
+}
+.active{
+  color: #ff5e19;
+  position: relative;
+}
+.type-movie.active::after{
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #ff5e19;
+  left: 0;
+}
+/* Video trailer */
+.youtube-container {
+  position: fixed;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (tùy chỉnh theo video của bạn) */
+  padding-top: 30px; /* Khoảng cách từ phía trên */
+  height: 0;
+  overflow: hidden;
+  display: block;
+  z-index: 1;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
