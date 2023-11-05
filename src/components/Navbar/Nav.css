@@ -1,0 +1,13 @@
+.dropdown-item{
+    transition: color 0.3s ease-in-out;
+    border: none;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+.dropdown-item:hover,
+.btn-buytickets:hover{
+    transform : translate(-2px,2px);
+    background-color: #f9f9f9;
+    color: #ff5e19;
+    opacity: 0.7;
+}

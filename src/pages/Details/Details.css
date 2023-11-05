@@ -1,0 +1,21 @@
+
+.image {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - 8px);
+}
+.btn-icon{
+    border-radius: 50%;
+    padding-right: 14px;
+    padding-left: 18px;
+    position: absolute;
+    color: #ccc;
+    background: #fff;
+    top: 45%;
+    left: 50%;
+    font-size: 30px;
+}
+
+.details{
+    
+}

@@ -1,14 +1,13 @@
 import './App.css';
 import {BrowserRouter,Routes,Route} from "react-router-dom"
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Nav from './components/Nav';
+import Home from './pages/Home/Home';
+import Login from './pages/Login/Login';
+import Nav from './components/Navbar/Nav';
 import Footer from './components/Footer';
-import CreatePost from './pages/CreatePost';
 import Profile from './pages/Profile';
-import Post from './pages/Post';
-import Register from './pages/Register';
+import Register from './pages/Register/Register';
 import BuyTicket from './pages/BuyTicket';
+import Details from './pages/Details/Details';
 
 
 function App() {
@@ -34,12 +33,11 @@ function App() {
           <Route path='/' element={<Home/>} />
           <Route path='/login' element={<Login/>}/>
           <Route path='/register' element={<Register/>}/>
-          <Route path='/post/byId/:id' element={<Post/>}/>
-          <Route path='/details' element={<Post/>}/>
-
           <Route path='/tickets/buy' element={<BuyTicket/>}/>
           <Route path='/profile' element={<Profile/>}/>
-
+          <Route path='/details' element={<Details/>}/>
+          {/* <Route path='/movie/nowshowing' element={</>}/>
+          <Route path='/movie/comingsoon' element={</>}/> */}
         </Routes>
       </div>
       <Footer style={footerStyle}/>
