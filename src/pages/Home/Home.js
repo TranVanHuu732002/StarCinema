@@ -18,7 +18,7 @@ function Home() {
     SetIsPlaying(true)
   }
 
-  const videoId = 'DHa4MSOzPXw'; 
+  const videoId = 'DHa4MSOzPXw';
 
   const opts = {
     height: '460px',

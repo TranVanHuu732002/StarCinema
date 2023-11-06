@@ -3,8 +3,8 @@ import {BrowserRouter,Routes,Route} from "react-router-dom"
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Nav from './components/Navbar/Nav';
-import Footer from './components/Footer';
-import Profile from './pages/Profile';
+import Footer from './components/Footer/Footer';
+import Profile from './pages/Profile/Profile';
 import Register from './pages/Register/Register';
 import BuyTicket from './pages/BuyTicket';
 import Details from './pages/Details/Details';
