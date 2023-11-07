@@ -8,7 +8,9 @@ import { Avatar, Card, CardHeader, Divider, Grid, IconButton, Slider, Stack } fr
 import CardContent from '@mui/material/CardContent';
 import { ColorCode } from '../../config/theme';
 import UserInfo from '../../components/UserInfo';
+import BillHistory from '../../components/BillHistory';
 import { CiEdit } from 'react-icons/ci';
+import Policy from '../../components/Policy';
 
 const marks = [
 	{
@@ -80,6 +82,7 @@ export default function Profile() {
 	return (
 		<Stack justifyContent={'space-between'} direction="row" height={'100vh'} bgcolor={ColorCode.BG_COLOR} p={'10%'}>
 			<Card sx={{ flex: 1, maxWidth: '30%', marginRight: '10%' }}>
+				<Stack marginBottom={'35px'}>
 				<CardHeader
 					avatar={
 						<IconButton onClick={''} component="span">
@@ -95,28 +98,58 @@ export default function Profile() {
 									Họ và tên
 								</Typography>
 								<Typography marginBottom={'-10px'} variant="body2">
-									Sinh nhật
+									Star
 								</Typography>
 							</Grid>
 						</Grid>
 					}
 				/>
-        <Divider sx={{ opacity:1 }} />
+				</Stack>
+				<Divider sx={{ opacity: 1 }} />
+				<Stack marginTop={'20px'} marginBottom={'70px'}>
+					<CardContent>
+						<Typography variant="body1" fontWeight={700}>
+							Tổng chi tiêu 2023
+						</Typography>
+						<Stack marginTop={'85px'}>
+							<Slider
+								aria-label="Restricted values"
+								defaultValue={0}
+								valueLabelFormat={valueLabelFormat}
+								getAriaValueText={valuetext}
+								step={null}
+								valueLabelDisplay="auto"
+								marks={marks}
+							/>
+						</Stack>
+					</CardContent>
+				</Stack>
+				<Divider sx={{ opacity: 1 }} />
 				<CardContent>
-					<Typography variant="body1" fontWeight={700}>
-						Tổng chi tiêu 2023
+					<Typography variant="body2" fontWeight={700} display={'inline'}>
+						HOTLINE hỗ trợ:
 					</Typography>
-					<Stack marginTop={'85px'}>
-						<Slider
-							aria-label="Restricted values"
-							defaultValue={0}
-							valueLabelFormat={valueLabelFormat}
-							getAriaValueText={valuetext}
-							step={null}
-							valueLabelDisplay="auto"
-							marks={marks}
-						/>
-					</Stack>
+					<Typography variant="body2" fontWeight={700} color={ColorCode.TX_COLOR} display={'inline'}>
+						19002224 (9:00 - 22:00)
+					</Typography>
+				</CardContent>
+				<Divider sx={{ opacity: 1 }} />
+				<CardContent>
+					<Typography variant="body2" fontWeight={700} display={'inline'}>
+						Email:
+					</Typography>
+					<Typography variant="body2" fontWeight={700} color={ColorCode.TX_COLOR} display={'inline'}>
+						supply@starcinema.vn
+					</Typography>
+				</CardContent>
+				<Divider sx={{ opacity: 1 }} />
+				<CardContent>
+					<Typography variant="body2" fontWeight={700} display={'inline'}>
+						Facebook:
+					</Typography>
+					<Typography variant="body2" fontWeight={700} color={ColorCode.TX_COLOR} display={'inline'}>
+						facebook.com/StarCinema
+					</Typography>
 				</CardContent>
 			</Card>
 			<Box sx={{ flex: 1 }}>
@@ -127,12 +160,14 @@ export default function Profile() {
 						<Tab label="Chính sách" {...a11yProps(2)} />
 					</Tabs>
 				</Box>
-				<CustomTabPanel value={value} index={0}></CustomTabPanel>
+				<CustomTabPanel value={value} index={0}>
+					{<BillHistory></BillHistory>}
+				</CustomTabPanel>
 				<CustomTabPanel value={value} index={1}>
 					{<UserInfo></UserInfo>}
 				</CustomTabPanel>
 				<CustomTabPanel value={value} index={2}>
-					Chính sách
+					<Policy></Policy>
 				</CustomTabPanel>
 			</Box>
 		</Stack>
